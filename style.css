@@ -1,0 +1,104 @@
+body {
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+  background: #f2f5f9;
+}
+
+header {
+  background-color: #273c75;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+header img {
+  height: 60px;
+  vertical-align: middle;
+}
+
+header h1 {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+nav {
+  background-color: #40739e;
+  text-align: center;
+  padding: 10px 0;
+}
+
+nav button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  margin: 0 15px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+nav button:hover {
+  color: #f1c40f;
+}
+
+.tab {
+  display: none;
+  padding: 30px;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.tab.active {
+  display: block;
+}
+
+input, textarea {
+  display: block;
+  margin: 10px auto;
+  padding: 12px;
+  width: 80%;
+  max-width: 400px;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #27ae60;
+  transform: scale(1.05);
+}
+
+#resultArea, #receipt {
+  margin-top: 20px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  display: inline-block;
+  max-width: 90%;
+  text-align: right;
+  direction: rtl;
+}
+
+.hidden {
+  display: none;
+}

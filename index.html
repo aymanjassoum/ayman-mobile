@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>مركز أيمن لصيانة الموبايل</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- رأس الصفحة -->
+  <header>
+    <img src="assets/logo.png" alt="شعار المركز" />
+    <h1>مركز أيمن لصيانة الموبايل</h1>
+  </header>
+
+  <!-- قائمة التبويبات -->
+  <nav>
+    <button onclick="showTab('statusTab')">🔍 حالة الجهاز</button>
+    <button onclick="showTab('receiveTab')">➕ استلام جهاز</button>
+  </nav>
+
+  <!-- التبويب 1: حالة الجهاز -->
+  <section id="statusTab" class="tab active">
+    <h2>🔍 حالة الجهاز</h2>
+    <p>أدخل الكود الرباعي الموجود على وصل الاستلام:</p>
+    <input type="text" id="clientCode" placeholder="مثال: AY45" />
+    <button onclick="checkStatus()">استعلام الآن</button>
+    <div id="resultArea"></div>
+  </section>
+
+  <!-- التبويب 2: استلام جهاز -->
+  <section id="receiveTab" class="tab">
+    <h2>➕ استلام جهاز جديد</h2>
+    <form onsubmit="submitForm(event)">
+      <input type="text" id="name" placeholder="👤 اسم الزبون" required />
+      <input type="text" id="phone" placeholder="📞 رقم الهاتف" required />
+      <input type="text" id="device" placeholder="📱 نوع الجهاز" required />
+      <input type="text" id="issue" placeholder="🔧 نوع العطل" required />
+      <textarea id="notes" placeholder="🗒️ ملاحظات (اختياري)"></textarea>
+      <button type="submit">تسجيل الجهاز</button>
+    </form>
+
+    <div id="receipt" class="hidden">
+      <h3>🧾 وصل استلام الجهاز</h3>
+      <div id="receiptData"></div>
+      <div id="qrcode"></div>
+      <button onclick="window.print()">🖨️ طباعة الوصل</button>
+    </div>
+  </section>
+
+  <!-- سكريبتات -->
+  <script src="js/qrcode.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
